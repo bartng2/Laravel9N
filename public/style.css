@@ -5451,9 +5451,61 @@ ul.add-actions-link li:first-child {
 }
 
 .thumbnail-image2 {
-    max-width: 150px;  /* Giới hạn chiều rộng tối đa là 100px */
-    max-height: 150px; /* Giới hạn chiều cao tối đa là 100px */
+    max-width: 95px;  /* Giới hạn chiều rộng tối đa là 100px */
+    max-height: 95px; /* Giới hạn chiều cao tối đa là 100px */
 }
+
+.detail-qty {
+  max-width: 80px;
+  padding: 9px 20px;
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.detail-qty > a {
+  font-size: 16px;
+  position: absolute;
+  right: 8px;
+  color: #707070;
+}
+
+.detail-qty > a:hover {
+  color: #F15412;
+}
+
+.detail-qty > a.qty-up {
+  top: 0;
+}
+
+.detail-qty > a.qty-down {
+  bottom: 0;
+}
+
+.divider-text-center {
+  text-align: center;
+  position: relative;
+}
+
+.divider-text-center::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid #ddd;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.divider-text-center span {
+  background-color: #fff;
+  padding: 0 15px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+
 
 /*----------------------------------------------------------------------------------------------------*/
 /*------------------------------------------> The End <-----------------------------------------------*/

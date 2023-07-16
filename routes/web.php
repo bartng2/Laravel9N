@@ -36,7 +36,7 @@ Route::get('product/{product_code}', DetailsComponent::class)->name('product.det
 
 Route::get('cart', CartComponent::class)->name('shop.cart');
 
-Route::get('checkout', CheckoutComponent::class)->name('shop.checkout');
+Route::get('checkout/{cart_id}', CheckoutComponent::class)->name('shop.checkout');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -44,11 +44,22 @@ Route::get('checkout', CheckoutComponent::class)->name('shop.checkout');
 
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Route::post('addCart', [CartComponent::class, 'addCart'])->name('Cart.add');
+Route::post('ShopaddCart', [ShopComponent::class, 'addCart'])->name('Shop.addCart');
+Route::put('updateCart/{product_code}', [CartComponent::class, 'updateCart'])->name('Shop.updateCart');
+Route::delete('deleteCart/{product_code}', [CartComponent::class, 'destroyCart'])->name('Shop.deleteCart');
 
 
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard'); //trang chủ
@@ -67,6 +78,7 @@ Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('admin/dashboard/editproduct/{id}', [ProductController::class, 'edit'])->name('admin.editproduct'); //giao diện cập nhật sản phẩm
     Route::put('admin/dashboard/updateproduct/{id}', [ProductController::class, 'update'])->name('admin.updateproduct'); //cập nhật sản phẩm
     Route::delete('admin/dashboard/deleteproduct/{id}', [ProductController::class, 'destroy'])->name('admin.deleteproduct'); // Xóa sản phẩm
+
 
 
 });

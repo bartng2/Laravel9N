@@ -9,6 +9,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
+         <link rel="stylesheet" type="text/css" href="{{ asset('bootstrap-5.0.2-dist/css/bootstrap.css') }}">
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
         <!-- Material Design Iconic Font-V2.2.0 -->
         <link rel="stylesheet" href="{{ asset('css/material-design-iconic-font.min.css') }}">
@@ -41,6 +42,8 @@
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
         <!-- Modernizr js -->
+
+        
         <script src="{{ asset('js/vendor/modernizr-2.8.3.min.js') }}"></script>
         @livewireStyles
     </head>
@@ -229,7 +232,7 @@
                                <div class="hb-menu">
                                    <nav>
                                        <ul>
-                                           <li class="dropdown-holder"><a href="">Trang chủ</a>
+                                           <li class="dropdown-holder"><a href="/">Trang chủ</a>
                                                <ul class="hb-dropdown">
                                                 <li><a href="">Giao diện 1</a></li>
                                                    <li><a href="">Giao diện 2</a></li>
@@ -523,108 +526,76 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <div class="modal-inner-area row">
-                                <div class="col-lg-5 col-md-6 col-sm-6">
-                                   <!-- Product Details Left -->
-                                    <div class="product-details-left">
-                                        <div class="product-details-images slider-navigation-1">
-                                            <div class="lg-image">
-                                                <img src="images/product/large-size/1.jpg" alt="product image">
-                                            </div>
-                                            <div class="lg-image">
-                                                <img src="images/product/large-size/2.jpg" alt="product image">
-                                            </div>
-                                            <div class="lg-image">
-                                                <img src="images/product/large-size/3.jpg" alt="product image">
-                                            </div>
-                                            <div class="lg-image">
-                                                <img src="images/product/large-size/4.jpg" alt="product image">
-                                            </div>
-                                            <div class="lg-image">
-                                                <img src="images/product/large-size/5.jpg" alt="product image">
-                                            </div>
-                                            <div class="lg-image">
-                                                <img src="images/product/large-size/6.jpg" alt="product image">
-                                            </div>
-                                        </div>
-                                        <div class="product-details-thumbs slider-thumbs-1">                                        
-                                            <div class="sm-image"><img src="images/product/small-size/1.jpg" alt="product image thumb"></div>
-                                            <div class="sm-image"><img src="images/product/small-size/2.jpg" alt="product image thumb"></div>
-                                            <div class="sm-image"><img src="images/product/small-size/3.jpg" alt="product image thumb"></div>
-                                            <div class="sm-image"><img src="images/product/small-size/4.jpg" alt="product image thumb"></div>
-                                            <div class="sm-image"><img src="images/product/small-size/5.jpg" alt="product image thumb"></div>
-                                            <div class="sm-image"><img src="images/product/small-size/6.jpg" alt="product image thumb"></div>
-                                        </div>
-                                    </div>
-                                    <!--// Product Details Left -->
+                            <div class="d-flex justify-content-between align-items-center mb-5">
+                                <div class="d-flex flex-row align-items-center">
+                                  <h4 class="text-uppercase mt-1">LIMUPA</h4>
+                                  <span class="ms-2 me-3">Pay</span>
                                 </div>
+                                <a href="/">Cancel and return to the website</a>
+                              </div>
 
-                                <div class="col-lg-7 col-md-6 col-sm-6">
-                                    <div class="product-details-view-content pt-60">
-                                        <div class="product-info">
-                                            <h2>Today is a good day Framed poster</h2>
-                                            <span class="product-details-ref">Reference: demo_15</span>
-                                            <div class="rating-box pt-20">
-                                                <ul class="rating rating-with-review-item">
-                                                    <li><i class="fa fa-star-o"></i></li>
-                                                    <li><i class="fa fa-star-o"></i></li>
-                                                    <li><i class="fa fa-star-o"></i></li>
-                                                    <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    <li class="review-item"><a href="#">Read Review</a></li>
-                                                    <li class="review-item"><a href="#">Write Review</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price-box pt-20">
-                                                <span class="new-price new-price-2">$57.98</span>
-                                            </div>
-                                            <div class="product-desc">
-                                                <p>
-                                                    <span>100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
-                                                    </span>
-                                                </p>
-                                            </div>
-                                            <div class="product-variants">
-                                                <div class="produt-variants-size">
-                                                    <label>Dimension</label>
-                                                    <select class="nice-select">
-                                                        <option value="1" title="S" selected="selected">40x60cm</option>
-                                                        <option value="2" title="M">60x90cm</option>
-                                                        <option value="3" title="L">80x120cm</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="single-add-to-cart">
-                                                <form action="#" class="cart-quantity">
-                                                    <div class="quantity">
-                                                        <label>Quantity</label>
-                                                        <div class="cart-plus-minus">
-                                                            <input class="cart-plus-minus-box" value="1" type="text">
-                                                            <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
-                                                            <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
-                                                        </div>
-                                                    </div>
-                                                    <button class="add-to-cart" type="submit">Add to cart</button>
-                                                </form>
-                                            </div>
-                                            <div class="product-additional-info pt-25">
-                                                <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
-                                                <div class="product-social-sharing pt-25">
-                                                    <ul>
-                                                        <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                                                        <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                                                        <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
-                                                        <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                              <div class="row">
+                                <div class="col-md-7 col-lg-7 col-xl-6 mb-4 mb-md-0">
+                                  <h5 class="mb-0 text-success">$85.00</h5>
+                                  <h5 class="mb-3">Diabites Pump & Supplies</h5>
+                                  <div>
+                                    <div class="d-flex justify-content-between">
+                                      <div class="d-flex flex-row mt-1">
+                                        <h6>Insurance Responsibility</h6>
+                                        <h6 class="fw-bold text-success ms-1">$71.76</h6>
+                                      </div>
+                                      <div class="d-flex flex-row align-items-center text-primary">
+                                        <span class="ms-1">Add Insurer card</span>
+                                      </div>
+                                    </div>
+                                    <p>
+                                      Insurance claim and all neccessary dependencies will be submitted to your
+                                      insurer for the covered portion of this order.
+                                    </p>
+                                    <div class="p-2 d-flex justify-content-between align-items-center" style="background-color: #eee;">
+                                      <div class="d-flex justify-content-between">
+                                            <span>VISA </span>
+                                            <span> **** 5436</span>
                                         </div>
                                     </div>
+                                    <hr />
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="d-flex flex-row mt-1">
+                                        <h6>Patient Balance</h6>
+                                        <h6 class="fw-bold text-success ms-1">$13.24</h6>
+                                      </div>
+                                      <div class="d-flex flex-row align-items-center text-primary">
+                                        <span class="ms-1">Add Payment card</span>
+                                      </div>
+                                    </div>
+                                    <p>
+                                      Insurance claim and all neccessary dependencies will be submitted to your
+                                      insurer for the covered portion of this order.
+                                    </p>
+                                    <div class="d-flex flex-column mb-3">
+                                      <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" />
+                                        <label class="btn btn-outline-primary btn-lg" for="option1">
+                                          <div class="d-flex justify-content-between">
+                                            <span>VISA </span>
+                                            <span>**** 5436</span>
+                                          </div>
+                                        </label>
+
+                                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" checked />
+                                        <label class="btn btn-outline-primary btn-lg" for="option2">
+                                          <div class="d-flex justify-content-between">
+                                            <span>MASTER CARD </span>
+                                            <span>**** 5038</span>
+                                          </div>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="btn btn-success btn-lg btn-block">Proceed to payment</div>
+                                  </div>
                                 </div>
-                            </div>
+                                
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -633,6 +604,7 @@
         </div>
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
+
         <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
         <!-- Popper js -->
         <script src="{{ asset('js/vendor/popper.min.js') }}"></script>

@@ -35,22 +35,31 @@
                                         <!-- shop-item-filter-list end -->
                                     </div>
                                     <div class="toolbar-amount">
-                                        <span>Showing 1 to 9 of 15</span>
+                                        <span>Showing 1 to 9 of {{$products->total()}}</span>
                                     </div>
                                 </div>
                                 <!-- product-select-box start -->
+
                                 <div class="product-select-box">
                                     <div class="product-short">
-                                        <p>Sort By:</p>
-                                        <select class="nice-select">
-                                            <option value="trending">Relevance</option>
-                                            <option value="sales">Name (A - Z)</option>
-                                            <option value="sales">Name (Z - A)</option>
-                                            <option value="rating">Price (Low &gt; High)</option>
-                                            <option value="date">Rating (Lowest)</option>
-                                            <option value="price-asc">Model (A - Z)</option>
-                                            <option value="price-asc">Model (Z - A)</option>
-                                        </select>
+                                        <div class="hb-menu">
+                                   <nav>
+                                       <ul>
+                                           <li class="dropdown-holder"><a>Sort By</a>
+                                               <ul class="hb-dropdown">
+                                                   <li><a class="{{$orderBy == 'Default Sorting' ? 'active' : ''}}" href="#" wire:click.prevent="changeOrderBy('Default Sorting')">Default Sorting</a>
+                                                   </li>
+                                                   <li><a class="{{$orderBy == 'Price: Low to High' ? 'active' : ''}}" href="#" wire:click.prevent="changeOrderBy('Price: Low to High')">Price: Low to High</a>
+                                                   </li>
+                                                   <li><a class="{{$orderBy == 'Price: High to Low' ? 'active' : ''}}" href="#" wire:click.prevent="changeOrderBy('Price: High to Low')">Price: High to Low</a>
+                                                   </li>
+                                                   <li><a class="{{$orderBy == 'Sort by Newness' ? 'active' : ''}}" href="#" wire:click.prevent="changeOrderBy('Sort by Newness')">Sort by Newness</a>
+                                                   </li>
+                                               </ul>
+                                           </li>
+                                       </ul>
+                                   </nav>
+                               </div>
                                     </div>
                                 </div>
                                 <!-- product-select-box end -->
@@ -95,9 +104,16 @@
                                                                 </div>
                                                             </div>
                                                             <div class="add-actions">
-                                                                <ul class="add-actions-link">
-                                                                    <li class="add-cart active"><a href="#" wire:click.prevents="store({{$item->id}}, '{{$item->name}}', {{$item->price}})">Add to cart</a></li>
-                                                                    <li><a href="{{ route('product.details', $item['id']) }}" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
+                                                                <ul class="add-actions-link d-flex justify-content-center">
+                                                                <form action="{{route('Shop.addCart')}}" method="POST">
+                                                                @csrf 
+                                                                <input type="hidden" name="product_code" value="{{$item->product_code}}">
+                                                                <input type="hidden" name="quantity" id="quantity">
+                                                                    <li class="add-cart active">
+                                                                        <a onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addCart') }}" data-product-code="{{ $item->product_code }}">Add to cart</a>
+                                                                    </li>
+                                                                </form>
+                                                                    </li>
                                                                     <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
                                                                 </ul>
                                                             </div>
@@ -812,3 +828,5 @@
             </div>
             <!-- Content Wraper Area End Here -->
 </div>
+
+
