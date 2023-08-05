@@ -71,7 +71,7 @@ The application includes 2 user interfaces: user interface and administrator int
 
 - Optimize the user experience on the application interface with LivewireComponent.
 - Manage registration, login, and logout functions with Laravel Authentication.
-- In this application, we use the database management system [MySql](https://www.mysql.com/) to store information such as: [product list], [category list], [user list], [shopping cart list], [favorite list]. To optimize the product [CRUD] process, we use [Trigger] to automatically perform functions in certain fields, such as: [automatically add product code], [automatically add catalog code], [automatically price] and [quantity statistics of products].
-- At the admin interface, we implement CRUD product and product catalog according to [RESTful API] standard.
-- Store product photos on the app with [Symbolic Link].
+- In this application, we use the database management system [MySql](https://www.mysql.com/) to store information such as: product list, category list, user list, shopping cart list, favorite list. To optimize the product [CRUD](https://www.codecademy.com/article/what-is-crud) process, we use [Trigger](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16#:~:text=A%20trigger%20is%20a%20special,on%20a%20table%20or%20view.) to automatically perform functions in certain fields, such as: automatically add product code, automatically add catalog code, automatically price and quantity statistics of products.
+- At the admin interface, we implement CRUD product and product catalog according to [RESTful API](https://www.redhat.com/en/topics/api/what-is-a-rest-api) standard.
+- Store product photos on the app with [Symbolic Link](https://en.wikipedia.org/wiki/Symbolic_link).
 - Order payment function will be done with: VNpay, Momo and bank account.
