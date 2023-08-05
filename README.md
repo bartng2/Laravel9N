@@ -57,21 +57,21 @@ Hope you will have a great experience using my program.
 
 ## Technology used
 
-- [frontend] : Html/CSS, Javascript, Bootstrap
-- [Backend] : Php, Laravel9x, MySql
+- frontend : Html/CSS, Javascript, Bootstrap
+- Backend : Php, Laravel9x, MySql
 
 ## Function Description
 
 The application includes 2 user interfaces: user interface and administrator interface.
 
-- [User interface] : Interface for users to access, conduct search and purchase products. Information of the products displayed here will be taken from the database.
-- [Administrator interface] : Users can only access this interface with accounts under the "administrator" privilege. Here, the administrator has the role of controlling the product display activities in the user interface, managing adding, editing and deleting product and product categories. In addition, here administrators can manage the number of user orders, product statistics and revenue functions.
+- User interface : Interface for users to access, conduct search and purchase products. Information of the products displayed here will be taken from the database.
+- Administrator interface : Users can only access this interface with accounts under the "administrator" privilege. Here, the administrator has the role of controlling the product display activities in the user interface, managing adding, editing and deleting product and product categories. In addition, here administrators can manage the number of user orders, product statistics and revenue functions.
 
 ## Detailed description
 
 - Optimize the user experience on the application interface with LivewireComponent.
 - Manage registration, login, and logout functions with Laravel Authentication.
-- In this application, we use the database management system [MySql] to store information such as: [product list], [category list], [user list], [shopping cart list], [favorite list]. To optimize the product [CRUD] process, we use [Trigger] to automatically perform functions in certain fields, such as: [automatically add product code], [automatically add catalog code], [automatically price] and [quantity statistics of products].
+- In this application, we use the database management system [MySql](https://www.mysql.com/) to store information such as: [product list], [category list], [user list], [shopping cart list], [favorite list]. To optimize the product [CRUD] process, we use [Trigger] to automatically perform functions in certain fields, such as: [automatically add product code], [automatically add catalog code], [automatically price] and [quantity statistics of products].
 - At the admin interface, we implement CRUD product and product catalog according to [RESTful API] standard.
 - Store product photos on the app with [Symbolic Link].
 - Order payment function will be done with: VNpay, Momo and bank account.
