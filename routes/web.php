@@ -6,6 +6,9 @@ use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\DetailsComponent;
+use App\Http\Livewire\WishlistComponent;
+use App\Http\Livewire\Shop2Component;
+use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Controllers\Admin\AdminController;
@@ -32,11 +35,17 @@ Route::get('/', HomeComponent::class)->name('home.index');
 
 Route::get('shop', ShopComponent::class)->name('shop');
 
+Route::get('search', SearchComponent::class)->name('search');
+
 Route::get('product/{product_code}', DetailsComponent::class)->name('product.details'); //chi tiết sản phẩm
 
 Route::get('cart', CartComponent::class)->name('shop.cart');
 
 Route::get('checkout/{cart_id}', CheckoutComponent::class)->name('shop.checkout');
+
+Route::get('wishlist', WishlistComponent::class)->name('shop.wishlist');
+
+Route::get('shop2', Shop2Component::class)->name('shop2');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -52,11 +61,18 @@ Route::post('addCart', [CartComponent::class, 'addCart'])->name('Cart.add');
 Route::post('ShopaddCart', [ShopComponent::class, 'addCart'])->name('Shop.addCart');
 Route::put('updateCart/{product_code}', [CartComponent::class, 'updateCart'])->name('Shop.updateCart');
 Route::delete('deleteCart/{product_code}', [CartComponent::class, 'destroyCart'])->name('Shop.deleteCart');
+Route::delete('deleteAllCart/{user_id}', [CartComponent::class, 'destroyAllCart'])->name('Shop.deleteAllCart');
 
 
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Route::post('ShopaddWishlist', [WishlistComponent::class, 'addWishlist'])->name('Shop.addWishlist');
+Route::delete('deleteAllWishlist/{user_id}', [WishlistComponent::class, 'destroyAllWishlist'])->name('Shop.deleteAllWishlist');
+Route::delete('deleteWishlist/{product_code}', [WishlistComponent::class, 'destroyWishlist'])->name('Shop.deleteWishlist');
+Route::post('WishlistaddCart', [WishlistComponent::class, 'addCart'])->name('Wishlist.addCart');
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////

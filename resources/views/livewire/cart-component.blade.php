@@ -36,7 +36,8 @@
                                                     @csrf
                                                     @method('DELETE')
                                                     <td class="li-product-remove">
-                                                            <a href="#" onclick="event.preventDefault(); document.getElementById('deleteForm{{$item->id}}').submit();"><i class="fa fa-times"></i>
+                                                        <a href="#" onclick="if (confirm('Product deletion confirmation!')) { document.getElementById('deleteForm{{$item->id}}').submit(); }">
+                                                                <i class="fa fa-times" ></i>
                                                             </a>
                                                     </td>
                                                     </form>
@@ -63,6 +64,7 @@
                                                     </td>
                                             </form>
                                                 </tr>
+                                                @php $user_id = $item->user_id @endphp
                                             @endforeach
                                             @else
                                             <tr>
@@ -72,9 +74,18 @@
                                         </tbody>
                                     </table>
                                      @if($count > 0)
+                                      
                                         <ul class="add-actions-link">
+                                            <form id="deleteForm{{$user_id}}" action="{{ route('Shop.deleteAllCart', $user_id) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                            <a href="#" onclick="if (confirm('Confirm to delete the entire cart!')) { document.getElementById('deleteForm{{$user_id}}').submit(); }">
+                                                X Clear Cart
+                                            </a>
+                                            </form>
                                             <li class="add-cart active"><a href="#">Check all cart</a></li>
                                         </ul>
+                                        
                                         @endif
                                 </div>
                         </div>

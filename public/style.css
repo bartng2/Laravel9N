@@ -5505,6 +5505,10 @@ ul.add-actions-link li:first-child {
   text-transform: uppercase;
 }
 
+.yellow-heart i.fa-heart-o {
+        color: yellow;
+    }
+
 
 
 /*----------------------------------------------------------------------------------------------------*/

@@ -90,22 +90,16 @@
                                             </span>
                                         </p>
                                     </div>
-                                    <div class="product-variants">
-                                        <div class="produt-variants-size">
-                                            <label>Dimension</label>
-                                            <select class="nice-select">
-                                                <option value="1" title="S" selected="selected">40x60cm</option>
-                                                <option value="2" title="M">60x90cm</option>
-                                                <option value="3" title="L">80x120cm</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="single-add-to-cart">
-                                        <form action="#" class="cart-quantity">
+                                        <form action="{{route('Cart.add')}}" method="POST" class="cart-quantity">
+                                            @csrf
+                                            <input type="hidden" name="product_code" value="{{$product->product_code}}">
+                                            <input type="hidden" name="quantity" id="quantity">
                                             <div class="quantity">
                                                 <label>Quantity</label>
                                                 <div class="cart-plus-minus">
-                                                    <input class="cart-plus-minus-box" value="1" type="text">
+                                                    <input name="quantity" class="cart-plus-minus-box" value="1" type="text">
                                                     <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
                                                     <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                                 </div>

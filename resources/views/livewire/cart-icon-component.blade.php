@@ -25,7 +25,7 @@
                                                             @csrf
                                                             @method('DELETE')
                                                             <td class="li-product-remove">
-                                                                    <a href="#" onclick="event.preventDefault(); document.getElementById('deleteForm{{$item->id}}').submit();"><i class="fa fa-times"></i>
+                                                                    <a href="#" onclick="if (confirm('Product deletion confirmation!')) { document.getElementById('deleteForm{{$item->id}}').submit(); }"><i class="fa fa-times"></i>
                                                                     </a>
                                                             </td>
                                                             </form>

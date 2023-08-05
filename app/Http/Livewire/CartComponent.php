@@ -10,40 +10,46 @@ use Illuminate\Http\Request;
 
 class CartComponent extends Component
 {
-    public $quantity = 1;
-
-    public function addCart()
+    public function addCart(Request $request)
     {
-        $user = Auth::user();
+
+        $productCode = $request->input('product_code');
+        $quantity = $request->input('quantity');
+
+        $user = Auth::user(); // Lấy thông tin người dùng hiện tại
 
         if (!$user) {
-            return redirect()->route('login');
+            // Người dùng chưa đăng nhập, xử lý tùy ý, ví dụ: chuyển hướng đến trang đăng nhập
+            return redirect()->route('login')->with('error', 'Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng.');
         }
 
-        $product = Product::find($this->product_code);
+        $product = Product::where('product_code', $productCode)->first();
 
         if (!$product) {
-            return redirect()->back();
+            return redirect()->back()->with('error', 'Sản phẩm không tồn tại.');
         }
 
-        $existItem = Cart::where('product_code', $this->product_code)
-                            ->where('user_id', $user->id)
-                            ->first();
+        $existingCartItem = Cart::where('product_code', $productCode)
+                                ->where('user_id', $user->id)
+                                ->first();
 
-        if ($existItem) {
-            $existItem->quantity += $this->quantity;
-            $existItem->save();
-        }else{
+        if ($existingCartItem) {
+            // Sản phẩm đã tồn tại trong giỏ hàng, cập nhật số lượng
+            $existingCartItem->product_quantity += $quantity;
+            $existingCartItem->save();
+        } else {
+            // Thêm sản phẩm mới vào giỏ hàng
             Cart::create([
-                'product_image' => $product->image,
-                'product_code' => $product->product_code,
-                'product_price' => $product->price,
-                'product_quantity' => $this->quantity,
                 'user_id' => $user->id,
+                'product_code' => $product->product_code,
+                'product_name' => $product->name,
+                'product_quantity' => $quantity,
+                'product_price' => $product->price,
+                'product_image' => $product->image,
             ]);
         }
 
-        $this->quantity = 1;
+        return redirect()->back();
     }
 
 
@@ -74,14 +80,34 @@ class CartComponent extends Component
         return redirect()->back();
     }
 
+    
+
+    public function destroyAllCart(string $user_id)
+    {
+        // Tìm giỏ hàng của người dùng
+        $cart = Cart::where('user_id', $user_id)->get();
+
+        if ($cart->isEmpty()) {
+            return response()->json(['message' => 'Không tìm thấy giỏ hàng'], 404);
+        }
+
+        // Xóa tất cả các bản ghi của giỏ hàng của người dùng
+        $cart->each->delete();
+
+        return redirect()->back();
+    }
+
+
 
     public function render()
     {
+        
         $user = Auth::user();
 
         if ($user) {
             $this->userCart = Cart::where('user_id', $user->id)->get();
             $this->count = Cart::where('user_id', $user->id)->count();
+            
         } else {
             $this->userCart = [];
             $this->count = 0;

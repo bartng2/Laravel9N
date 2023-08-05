@@ -124,80 +124,10 @@
                             <!-- Begin Header Middle Right Area -->
                             <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
                                 <!-- Begin Header Middle Searchbox Area -->
-                                <form action="#" class="hm-searchbox">
-                                    <select class="nice-select select-search-category">
-                                        <option value="0">All</option>                         
-                                        <option value="10">Laptops</option>                     
-                                        <option value="17">- -  Prime Video</option>                    
-                                        <option value="20">- - - -  All Videos</option>                     
-                                        <option value="21">- - - -  Blouses</option>                        
-                                        <option value="22">- - - -  Evening Dresses</option>                
-                                        <option value="23">- - - -  Summer Dresses</option>                     
-                                        <option value="24">- - - -  T-shirts</option>                       
-                                        <option value="25">- - - -  Rent or Buy</option>                        
-                                        <option value="26">- - - -  Your Watchlist</option>                     
-                                        <option value="27">- - - -  Watch Anywhere</option>                     
-                                        <option value="28">- - - -  Getting Started</option>         
-                                        <option value="18">- - - -  Computers</option>                      
-                                        <option value="29">- - - -  More to Explore</option>         
-                                        <option value="30">- - - -  TV &amp; Video</option>                     
-                                        <option value="31">- - - -  Audio &amp; Theater</option>               
-                                        <option value="32">- - - -  Camera, Photo </option>
-                                        <option value="33">- - - -  Cell Phones</option>                        
-                                        <option value="34">- - - -  Headphones</option>                     
-                                        <option value="35">- - - -  Video Games</option>                        
-                                        <option value="36">- - - -  Wireless Speakers</option>            
-                                        <option value="19">- - - -  Electronics</option>                        
-                                        <option value="37">- - - -  Amazon Home</option>                        
-                                        <option value="38">- - - -  Kitchen &amp; Dining</option>           
-                                        <option value="39">- - - -  Furniture</option>                      
-                                        <option value="40">- - - -  Bed &amp; Bath</option>                     
-                                        <option value="41">- - - -  Appliances</option>                 
-                                        <option value="11">TV &amp; Audio</option>                  
-                                        <option value="42">- -  Chamcham</option>                        
-                                        <option value="45">- - - -  Office</option>                     
-                                        <option value="47">- - - -  Gaming</option>                 
-                                        <option value="48">- - - -  Chromebook</option>                     
-                                        <option value="49">- - - -  Refurbished</option>                    
-                                        <option value="50">- - - -  Touchscreen</option>                        
-                                        <option value="51">- - - -  Ultrabooks</option>                     
-                                        <option value="52">- - - -  Blouses</option>                        
-                                        <option value="43">- -  Meito</option>                        
-                                        <option value="53">- - - -  Hard Drives</option>                        
-                                        <option value="54">- - - -  Graphic Cards</option>                      
-                                        <option value="55">- - - -  Processors (CPU)</option>  
-                                        <option value="56">- - - -  Memory</option>                     
-                                        <option value="57">- - - -  Motherboards</option>                       
-                                        <option value="58">- - - -  Fans &amp; Cooling</option> 
-                                        <option value="59">- - - -  CD/DVD Drives</option>                      
-                                        <option value="44">- -  XailStation</option>                        
-                                        <option value="60">- - - -  Sound Cards</option>                        
-                                        <option value="61">- - - -  Cases &amp; Towers</option>   
-                                        <option value="62">- - - -  Casual Dresses</option>                     
-                                        <option value="63">- - - -  Evening Dresses</option>       
-                                        <option value="64">- - - -  T-shirts</option>                       
-                                        <option value="65">- - - -  Tops</option>                                 
-                                        <option value="12">Smartphone</option>                  
-                                        <option value="66">- -  Camera Accessories</option>                     
-                                        <option value="68">- - - -  Octa Core</option>                      
-                                        <option value="69">- - - -  Quad Core</option>                  
-                                        <option value="70">- - - -  Dual Core</option>                      
-                                        <option value="71">- - - -  7.0 Screen</option>                     
-                                        <option value="72">- - - -  9.0 Screen</option>                     
-                                        <option value="73">- - - -  Bags &amp; Cases</option>                   
-                                        <option value="67">- -  Sanai</option>                     
-                                        <option value="74">- - - -  Batteries</option>                      
-                                        <option value="75">- - - -  Microphones</option>                        
-                                        <option value="76">- - - -  Stabilizers</option>                        
-                                        <option value="77">- - - -  Video Tapes</option>                        
-                                        <option value="78">- - - -  Memory Card Readers</option> 
-                                        <option value="79">- - - -  Tripods</option>           
-                                        <option value="13">Cameras</option>                          
-                                        <option value="14">headphone</option>                                
-                                        <option value="15">Smartwatch</option>                           
-                                        <option value="16">Accessories</option>
-                                    </select>
-                                    <input type="text" placeholder="Enter your search key ...">
+                                <form action="{{route('search')}}" method="GET" class="hm-searchbox">
+                                    @csrf
+                                    
+                                    <input type="text" name="query" placeholder="Enter your search key ...">
                                     <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                                 <!-- Header Middle Searchbox Area End Here -->
@@ -205,12 +135,7 @@
                                 <div class="header-middle-right">
                                     <ul class="hm-menu">
                                         <!-- Begin Header Middle Wishlist Area -->
-                                        <li class="hm-wishlist">
-                                            <a href="wishlist.html">
-                                                <span class="cart-item-count wishlist-item-count">0</span>
-                                                <i class="fa fa-heart-o"></i>
-                                            </a>
-                                        </li>
+                                        @livewire('wishlist-icon-component')
                                         <!-- Header Middle Wishlist Area End Here -->
                                        @livewire('cart-icon-component')
                                     </ul>
@@ -238,12 +163,12 @@
                                                    <li><a href="">Giao diện 2</a></li>
                                                </ul>
                                            </li>
-                                           <li class="megamenu-holder"><a href="{{ route('shop') }}">Sản phẩm</a>
+                                           <li class="megamenu-holder"><a href="{{ route('shop') }}">Products</a>
                                                <ul class="megamenu hb-megamenu">
-                                                   <li><a href="#">Bố cục trang cửa hàng</a>
+                                                   <li><a href="{{ route('shop') }}">Store page layout</a>
                                                        <ul>
-                                                           <li><a href="{{ route('shop') }}">Tất cả sản phẩm</a></li>
-                                                           <li><a href="">Chi tiết sản phẩm</a></li>
+                                                           <li><a href="{{ route('shop') }}">All products</a></li>
+                                                           <li><a href="{{route('shop2')}}">Product details</a></li>
                                                        </ul>
                                                    </li>
                                                </ul>
@@ -306,7 +231,7 @@
                                 <div class="col-lg-3 col-md-6 col-sm-6 pb-sm-55 pb-xs-55">
                                     <div class="li-shipping-inner-box">
                                         <div class="shipping-icon">
-                                            <img src="images/shipping-icon/1.png" alt="Shipping Icon">
+                                            <img src="{{ asset('images/shipping-icon/1.png') }}" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
                                             <h2>Free Delivery</h2>
@@ -319,7 +244,7 @@
                                 <div class="col-lg-3 col-md-6 col-sm-6 pb-sm-55 pb-xs-55">
                                     <div class="li-shipping-inner-box">
                                         <div class="shipping-icon">
-                                            <img src="images/shipping-icon/2.png" alt="Shipping Icon">
+                                            <img src="{{ asset('images/shipping-icon/2.png') }}" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
                                             <h2>Safe Payment</h2>
@@ -332,7 +257,7 @@
                                 <div class="col-lg-3 col-md-6 col-sm-6 pb-xs-30">
                                     <div class="li-shipping-inner-box">
                                         <div class="shipping-icon">
-                                            <img src="images/shipping-icon/3.png" alt="Shipping Icon">
+                                            <img src="{{ asset('images/shipping-icon/3.png') }}" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
                                             <h2>Shop with Confidence</h2>
@@ -345,7 +270,7 @@
                                 <div class="col-lg-3 col-md-6 col-sm-6 pb-xs-30">
                                     <div class="li-shipping-inner-box">
                                         <div class="shipping-icon">
-                                            <img src="images/shipping-icon/4.png" alt="Shipping Icon">
+                                            <img src="{{ asset('images/shipping-icon/4.png') }}" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
                                             <h2>24/7 Help Center</h2>
@@ -368,7 +293,7 @@
                                 <!-- Begin Footer Logo Area -->
                                 <div class="col-lg-4 col-md-6">
                                     <div class="footer-logo">
-                                        <img src="images/menu/logo/1.jpg" alt="Footer Logo">
+                                        <img src="{{ asset('images/menu/logo/1.jpg') }}" alt="Footer Logo">
                                         <p class="info">
                                             We are a team of designers and developers that create high quality HTML Template & Woocommerce, Shopify Theme.
                                         </p>
@@ -523,82 +448,123 @@
             <!-- Footer Area End Here -->
             <!-- Begin Quick View | Modal Area -->
             <div class="modal fade modal-wrapper" id="exampleModalCenter" >
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="d-flex justify-content-between align-items-center mb-5">
-                                <div class="d-flex flex-row align-items-center">
-                                  <h4 class="text-uppercase mt-1">LIMUPA</h4>
-                                  <span class="ms-2 me-3">Pay</span>
-                                </div>
-                                <a href="/">Cancel and return to the website</a>
-                              </div>
-
-                              <div class="row">
-                                <div class="col-md-7 col-lg-7 col-xl-6 mb-4 mb-md-0">
-                                  <h5 class="mb-0 text-success">$85.00</h5>
-                                  <h5 class="mb-3">Diabites Pump & Supplies</h5>
-                                  <div>
-                                    <div class="d-flex justify-content-between">
-                                      <div class="d-flex flex-row mt-1">
-                                        <h6>Insurance Responsibility</h6>
-                                        <h6 class="fw-bold text-success ms-1">$71.76</h6>
-                                      </div>
-                                      <div class="d-flex flex-row align-items-center text-primary">
-                                        <span class="ms-1">Add Insurer card</span>
-                                      </div>
-                                    </div>
-                                    <p>
-                                      Insurance claim and all neccessary dependencies will be submitted to your
-                                      insurer for the covered portion of this order.
-                                    </p>
-                                    <div class="p-2 d-flex justify-content-between align-items-center" style="background-color: #eee;">
-                                      <div class="d-flex justify-content-between">
-                                            <span>VISA </span>
-                                            <span> **** 5436</span>
-                                        </div>
-                                    </div>
-                                    <hr />
-                                    <div class="d-flex justify-content-between align-items-center">
-                                      <div class="d-flex flex-row mt-1">
-                                        <h6>Patient Balance</h6>
-                                        <h6 class="fw-bold text-success ms-1">$13.24</h6>
-                                      </div>
-                                      <div class="d-flex flex-row align-items-center text-primary">
-                                        <span class="ms-1">Add Payment card</span>
-                                      </div>
-                                    </div>
-                                    <p>
-                                      Insurance claim and all neccessary dependencies will be submitted to your
-                                      insurer for the covered portion of this order.
-                                    </p>
-                                    <div class="d-flex flex-column mb-3">
-                                      <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" />
-                                        <label class="btn btn-outline-primary btn-lg" for="option1">
-                                          <div class="d-flex justify-content-between">
-                                            <span>VISA </span>
-                                            <span>**** 5436</span>
-                                          </div>
-                                        </label>
-
-                                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" checked />
-                                        <label class="btn btn-outline-primary btn-lg" for="option2">
-                                          <div class="d-flex justify-content-between">
-                                            <span>MASTER CARD </span>
-                                            <span>**** 5038</span>
-                                          </div>
-                                        </label>
-                                      </div>
-                                    </div>
-                                    <div class="btn btn-success btn-lg btn-block">Proceed to payment</div>
-                                  </div>
-                                </div>
-                                
-                              </div>
-                        </div>
-                    </div>
+                <!-- This script got from frontendfreecode.com -->
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                    <!-- Credit card form tabs -->
+                    <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                        <li class="nav-item">
+                            <a data-toggle="pill" href="#credit-card" class="nav-link active"> <i class="fas fa-credit-card mr-2"></i> Credit Card </a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="pill" href="#paypal" class="nav-link"> <i class="fab fa-paypal mr-2"></i> Paypal </a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="pill" href="#net-banking" class="nav-link"> <i class="fas fa-mobile-alt mr-2"></i> Net Banking </a>
+                        </li>
+                    </ul>
                 </div>
+                <!-- End -->
+                <!-- Credit card form content -->
+                <div class="tab-content">
+                    <!-- credit card info-->
+                    <div id="credit-card" class="tab-pane fade show active pt-3">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="username">
+                                    <h6>Card Owner</h6>
+                                </label>
+                                <input type="text" name="username" placeholder="Card Owner Name" required class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="cardNumber">
+                                    <h6>Card number</h6>
+                                </label>
+                                <div class="input-group">
+                                    <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control" required />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text text-muted"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <label>
+                                            <span class="hidden-xs">
+                                                <h6>Expiration Date</h6>
+                                            </span>
+                                        </label>
+                                        <div class="input-group"><input type="number" placeholder="MM" name="" class="form-control" required /> <input type="number" placeholder="YY" name="" class="form-control" required /></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group mb-4">
+                                        <label data-toggle="tooltip" title="Three digit CV code on the back of your card">
+                                            <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                        </label>
+                                        <input type="text" required class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"><button type="button" class="subscribe btn btn-primary btn-block shadow-sm">Confirm Payment</button></div>
+                        </form>
+                    </div>
+                    <!-- End -->
+                    <!-- Paypal info -->
+                    <div id="paypal" class="tab-pane fade pt-3">
+                        <h6 class="pb-2">Select your paypal account type</h6>
+                        <div class="form-group">
+                            <label class="radio-inline"> <input type="radio" name="optradio" checked /> Domestic </label> <label class="radio-inline"> <input type="radio" name="optradio" class="ml-5" />International </label>
+                        </div>
+                        <p>
+                            <button type="button" class="btn btn-primary"><i class="fab fa-paypal mr-2"></i> Log into my Paypal</button>
+                        </p>
+                        <p class="text-muted">
+                            Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order.
+                        </p>
+                    </div>
+                    <!-- End -->
+                    <!-- bank transfer info -->
+                    <div id="net-banking" class="tab-pane fade pt-3">
+                        <div class="form-group">
+                            <label for="Select Your Bank">
+                                <h6>Select your Bank</h6>
+                            </label>
+                            <select class="form-control" id="ccmonth">
+                                <option value="" selected disabled>--Please select your Bank--</option>
+                                <option>Bank 1</option>
+                                <option>Bank 2</option>
+                                <option>Bank 3</option>
+                                <option>Bank 4</option>
+                                <option>Bank 5</option>
+                                <option>Bank 6</option>
+                                <option>Bank 7</option>
+                                <option>Bank 8</option>
+                                <option>Bank 9</option>
+                                <option>Bank 10</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p>
+                                <button type="button" class="btn btn-primary"><i class="fas fa-mobile-alt mr-2"></i> Proceed Payment</button>
+                            </p>
+                        </div>
+                        <p class="text-muted">
+                            Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order.
+                        </p>
+                    </div>
+                    <!-- End -->
+                    <!-- End -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div><a style="font-size: 8pt; text-decoration: none" target="_blank" href="http://frontendfreecode.com">Free Frontend</a>
+                                                                            
             </div>   
             <!-- Quick View | Modal Area End Here -->
         </div>

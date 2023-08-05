@@ -6,11 +6,10 @@ use Livewire\Component;
 use App\Models\Product;
 use Livewire\WithPagination;
 use App\Models\Cart;
-use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class ShopComponent extends Component
+class Shop2Component extends Component
 {
 
     public function addCart(Request $request)
@@ -66,17 +65,8 @@ class ShopComponent extends Component
 
     public function render()
     {
-        if (Auth::check()) {
-            $user = Auth::user();
-            // Lấy danh sách sản phẩm trong Wishlist của người dùng
-            $wishlistProducts = Wishlist::where('user_id', $user->id)->pluck('product_code')->toArray();
-        } else {
-            // Nếu người dùng chưa đăng nhập, danh sách Wishlist rỗng
-            $wishlistProducts = [];
-        }
 
         $perPage = 12; // Số lượng sản phẩm hiển thị trên mỗi trang
-
         if ($this->orderBy == "Price: Low to High") {
             $products = Product::orderBy('price', 'ASC')->paginate($perPage);
         }
@@ -89,16 +79,6 @@ class ShopComponent extends Component
         else{
             $products = Product::paginate($perPage);
         }
-
-        foreach ($products as $product) {
-        $product->is_favorite = in_array($product->product_code, $wishlistProducts);
-        }
-
-        return view('livewire.shop-component', [
-            'products' => $products,
-
-        ]);
+        return view('livewire.shop2-component', ['products' => $products]);
     }
-
-    
 }
