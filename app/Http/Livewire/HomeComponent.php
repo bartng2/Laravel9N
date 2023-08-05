@@ -10,6 +10,10 @@ class HomeComponent extends Component
     public function render()
     {
         $nproducts = Product::latest()->take(10)->get();
-        return view('livewire.home-component', ['nproducts'=>$nproducts]);
+        $laptop = Product::where('category_id', 20)->take(10)->get();
+        return view('livewire.home-component', [
+            'nproducts'=>$nproducts,
+            'laptop' => $laptop
+        ]);
     }
 }

@@ -46,9 +46,11 @@
                         <td><?= $item['price'] ?></td>
                         <td><?= $item['quantity'] ?></td>
                         <td>
+
                           <form method="POST" action="{{ route('admin.deleteproduct', $item['id']) }}">
                             @csrf
                             @method('DELETE')
+                            <a type="button" href="" class="btn btn-primary small-button" style="background-color: #f0f0f0; color: #888;">Tùy chọn</a>
                            <a type="button" href="{{ route('admin.showproduct', $item['id']) }}" class="btn btn-primary small-button">Xem</a>
                           <a type="button" href="{{ route('admin.editproduct', $item['id']) }}" class="btn btn-warning small-button">Sửa</a>
                           <button type="submit" onclick="return confirm('Xác nhận xóa sản phẩm!')" class="btn btn-danger small-button">Xóa</button>

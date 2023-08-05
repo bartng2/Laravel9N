@@ -157,18 +157,18 @@
                                <div class="hb-menu">
                                    <nav>
                                        <ul>
-                                           <li class="dropdown-holder"><a href="/">Trang chủ</a>
+                                           <li class="dropdown-holder"><a href="/">Home</a>
                                                <ul class="hb-dropdown">
-                                                <li><a href="">Giao diện 1</a></li>
-                                                   <li><a href="">Giao diện 2</a></li>
+                                                <li><a href="">Home 1</a></li>
+                                                   <li><a href="">Home 2</a></li>
                                                </ul>
                                            </li>
-                                           <li class="megamenu-holder"><a href="{{ route('shop') }}">Products</a>
+                                           <li class="megamenu-holder"><a href="#">Sản phẩm</a>
                                                <ul class="megamenu hb-megamenu">
-                                                   <li><a href="{{ route('shop') }}">Store page layout</a>
+                                                   <li><a href="#">Bố cục trang cửa hàng</a>
                                                        <ul>
-                                                           <li><a href="{{ route('shop') }}">All products</a></li>
-                                                           <li><a href="{{route('shop2')}}">Product details</a></li>
+                                                           <li><a href="{{ route('shop') }}">Điện thoại & Tablet</a></li>
+                                                           <li><a href="{{route('shop2')}}">Laptop</a></li>
                                                        </ul>
                                                    </li>
                                                </ul>

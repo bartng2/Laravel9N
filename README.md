@@ -49,18 +49,29 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
 - **[Lendio](https://lendio.com)**
 
-## Contributing
+## About my App (Limupa)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+This is an e-commerce application designed using the Laravel framework.
+Here, users can search and order modern electronic devices such as smartphones, computers, laptops, smart watches, ...
+Hope you will have a great experience using my program.
 
-## Code of Conduct
+## Technology used
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- [frontend] : Html/CSS, Javascript, Bootstrap
+- [Backend] : Php, Laravel9x, MySql
 
-## Security Vulnerabilities
+## Function Description
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The application includes 2 user interfaces: user interface and administrator interface.
 
-## License
+- [User interface] : Interface for users to access, conduct search and purchase products. Information of the products displayed here will be taken from the database.
+- [Administrator interface] : Users can only access this interface with accounts under the "administrator" privilege. Here, the administrator has the role of controlling the product display activities in the user interface, managing adding, editing and deleting product and product categories. In addition, here administrators can manage the number of user orders, product statistics and revenue functions.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Detailed description
+
+- Optimize the user experience on the application interface with LivewireComponent.
+- Manage registration, login, and logout functions with Laravel Authentication.
+- In this application, we use the database management system [MySql] to store information such as: [product list], [category list], [user list], [shopping cart list], [favorite list]. To optimize the product [CRUD] process, we use [Trigger] to automatically perform functions in certain fields, such as: [automatically add product code], [automatically add catalog code], [automatically price] and [quantity statistics of products].
+- At the admin interface, we implement CRUD product and product catalog according to [RESTful API] standard.
+- Store product photos on the app with [Symbolic Link].
+- Order payment function will be done with: VNpay, Momo and bank account.

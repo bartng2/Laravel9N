@@ -78,16 +78,16 @@ class ShopComponent extends Component
         $perPage = 12; // Số lượng sản phẩm hiển thị trên mỗi trang
 
         if ($this->orderBy == "Price: Low to High") {
-            $products = Product::orderBy('price', 'ASC')->paginate($perPage);
+            $products = Product::where('category_id', 17)->orderBy('price', 'ASC')->paginate($perPage);
         }
         else if ($this->orderBy == "Price: High to Low") {
-            $products = Product::orderBy('price', 'DESC')->paginate($perPage);
+            $products = Product::where('category_id', 17)->orderBy('price', 'DESC')->paginate($perPage);
         }
         else if ($this->orderBy == "Sort by Newness") {
-            $products = Product::orderBy('created_at', 'DESC')->paginate($perPage);
+            $products = Product::where('category_id', 17)->orderBy('created_at', 'DESC')->paginate($perPage);
         }
-        else{
-            $products = Product::paginate($perPage);
+        else {
+            $products = Product::where('category_id', 17)->paginate($perPage);
         }
 
         foreach ($products as $product) {

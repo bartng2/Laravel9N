@@ -7,6 +7,7 @@ use App\Models\Product;
 use Livewire\WithPagination;
 use App\Models\Cart;
 use Illuminate\Http\Request;
+use App\Models\Wishlist;
 use Illuminate\Support\Facades\Auth;
 
 class Shop2Component extends Component
@@ -66,19 +67,34 @@ class Shop2Component extends Component
     public function render()
     {
 
+        if (Auth::check()) {
+            $user = Auth::user();
+            // Lấy danh sách sản phẩm trong Wishlist của người dùng
+            $wishlistProducts = Wishlist::where('user_id', $user->id)->pluck('product_code')->toArray();
+        } else {
+            // Nếu người dùng chưa đăng nhập, danh sách Wishlist rỗng
+            $wishlistProducts = [];
+        }
+
         $perPage = 12; // Số lượng sản phẩm hiển thị trên mỗi trang
+
         if ($this->orderBy == "Price: Low to High") {
-            $products = Product::orderBy('price', 'ASC')->paginate($perPage);
+            $products = Product::where('category_id', 20)->orderBy('price', 'ASC')->paginate($perPage);
         }
         else if ($this->orderBy == "Price: High to Low") {
-            $products = Product::orderBy('price', 'DESC')->paginate($perPage);
+            $products = Product::where('category_id', 20)->orderBy('price', 'DESC')->paginate($perPage);
         }
         else if ($this->orderBy == "Sort by Newness") {
-            $products = Product::orderBy('created_at', 'DESC')->paginate($perPage);
+            $products = Product::where('category_id', 20)->orderBy('created_at', 'DESC')->paginate($perPage);
         }
-        else{
-            $products = Product::paginate($perPage);
+        else {
+            $products = Product::where('category_id', 20)->paginate($perPage);
         }
+
+        foreach ($products as $product) {
+        $product->is_favorite = in_array($product->product_code, $wishlistProducts);
+        }
+
         return view('livewire.shop2-component', ['products' => $products]);
     }
 }

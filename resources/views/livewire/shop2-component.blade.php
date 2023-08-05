@@ -1,23 +1,25 @@
-<div class="breadcrumb-area">
+<div>
+    <!-- Begin Li's Breadcrumb Area -->
+            <div class="breadcrumb-area">
                 <div class="container">
                     <div class="breadcrumb-content">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active">Shop List</li>
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li class="active">Laptop</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- Li's Breadcrumb Area End Here -->
             <!-- Begin Li's Content Wraper Area -->
-            <div class="content-wraper pt-60 pb-60">
+            <div class="content-wraper pt-60 pb-60 pt-sm-30">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-9 order-1 order-lg-2">
                             <!-- Begin Li's Banner Area -->
                             <div class="single-banner shop-page-banner">
                                 <a href="#">
-                                     <img src="{{ asset('images/bg-banner/2.jpg') }}" alt="Li's Static Banner">
+                                    <img src="{{ asset('images/bg-banner/2.jpg') }}" alt="Li's Static Banner">
                                 </a>
                             </div>
                             <!-- Li's Banner Area End Here -->
@@ -27,8 +29,8 @@
                                     <div class="product-view-mode">
                                         <!-- shop-item-filter-list start -->
                                         <ul class="nav shop-item-filter-list" role="tablist">
-                                            <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="grid-view" href="#grid-view"><i class="fa fa-th"></i></a></li>
-                                            <li class="active" role="presentation"><a aria-selected="true" class="active show" data-toggle="tab" role="tab" aria-controls="list-view" href="#list-view"><i class="fa fa-th-list"></i></a></li>
+                                            <li class="active" role="presentation"><a aria-selected="true" class="active show" data-toggle="tab" role="tab" aria-controls="grid-view" href="#grid-view"><i class="fa fa-th"></i></a></li>
+                                            <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="list-view" href="#list-view"><i class="fa fa-th-list"></i></a></li>
                                         </ul>
                                         <!-- shop-item-filter-list end -->
                                     </div>
@@ -37,6 +39,7 @@
                                     </div>
                                 </div>
                                 <!-- product-select-box start -->
+
                                 <div class="product-select-box">
                                     <div class="product-short">
                                         <div class="hb-menu">
@@ -65,9 +68,10 @@
                             <!-- shop-products-wrapper start -->
                             <div class="shop-products-wrapper">
                                 <div class="tab-content">
-                                    <div id="grid-view" class="tab-pane fade" role="tabpanel">
+                                   <div id="grid-view" class="tab-pane fade active show" role="tabpanel">
                                         <div class="product-area shop-product-area">
                                             <div class="row">
+                                                
                                                 @foreach($products as $item)
                                                 <div class="col-lg-4 col-md-4 col-sm-6 mt-40">
                                                     <!-- single-product-wrap start -->
@@ -110,12 +114,34 @@
                                                                         <a onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addCart') }}" data-product-code="{{ $item->product_code }}">Add to cart</a>
                                                                     </li>
                                                                 </form>
-                                                                <form action="{{route('Shop.addWishlist')}}" method="POST">
-                                                                    @csrf
-                                                                    <input type="hidden" name="product_code" value="{{$item->product_code}}">
+                                                                 
+                                                                
+                                                                <form action="{{ route('Shop.addWishlist') }}" method="POST">
+                                                                @csrf
+                                                                <input type="hidden" name="product_code" value="{{ $item->product_code }}">
+                                                                @if($item->is_favorite)
+                                                                <li style="background-color: yellow;">
+                                                                    <!-- Thêm kiểm tra để tô màu vàng biểu tượng trái tim -->
                                                                     
-                                                                    <li><a class="links-details" onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addWishlist') }}" data-product-code="{{ $item->product_code }}"><i class="fa fa-heart-o"></i></a></li>
+                                                                    <a class="links-details" onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addWishlist') }}" data-product-code="{{ $item->product_code }}">
+                                                                        <i class="fa fa-heart-o"></i>
+                                                                    </a>
+                                                                    
+                                                                    
+                                                                </li>
+                                                                @else
+                                                                <li>
+                                                                    <!-- Thêm kiểm tra để tô màu vàng biểu tượng trái tim -->
+                                                                    
+                                                                    <a class="links-details" onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addWishlist') }}" data-product-code="{{ $item->product_code }}">
+                                                                        <i class="fa fa-heart-o"></i>
+                                                                    </a>
+                                                                    
+                                                                    
+                                                                </li>
+                                                                @endif
                                                                 </form>
+                                                               
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -123,13 +149,14 @@
                                                     <!-- single-product-wrap end -->
                                                 </div>
                                                 @endforeach
+                                                
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="list-view" class="tab-pane fade product-list-view active show" role="tabpanel">
+                                    <div id="list-view" class="tab-pane fade product-list-view" role="tabpanel">
                                         <div class="row">
                                             <div class="col">
-                                                @foreach($products as $item)
+                                                 @foreach($products as $item)
                                                 <div class="row product-layout-list">
                                                     <div class="col-lg-3 col-md-5 ">
                                                         <div class="product-image">
@@ -181,14 +208,15 @@
                                                                     </a>
                                                                     </form>
                                                                 </li>
-                                                                <form action="{{route('Shop.addWishlist')}}" method="POST">
-                                                                @csrf
-                                                                <input type="hidden" name="product_code" value="{{$item->product_code}}">
-                                                                <li class="wishlist">
-                                                                    <a class="links-details" onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addWishlist') }}" data-product-code="{{ $item->product_code }}">
-                                                                        <i class="fa fa-heart-o"></i>Add to wishlist
-                                                                    </a>
-                                                                </li>
+                                                                <form action="{{ route('Shop.addWishlist') }}" method="POST">
+                                                                    @csrf
+                                                                    <input type="hidden" name="product_code" value="{{ $item->product_code }}">
+                                                                    <!-- Kiểm tra xem sản phẩm đã tồn tại trong Wishlist hay không -->
+                                                                    <li class="wishlist">
+                                                                        <a class="links-details @if($item->is_favorite) yellow-heart @endif" onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addWishlist') }}" data-product-code="{{ $item->product_code }}">
+                                                                            <i class="fa fa-heart-o"></i>Add to wishlist
+                                                                        </a>
+                                                                    </li>
                                                                 </form>
                                                                 <li class="wishlist"><a href="{{ route('product.details', ['product_code' => $item->product_code]) }}"><i class="fa fa-eye"></i>Product details</a></li>
                                                                 
@@ -347,7 +375,7 @@
                             </div>
                             <!--sidebar-categores-box end  -->
                             <!-- category-sub-menu start -->
-                            <div class="sidebar-categores-box mb-sm-0">
+                            <div class="sidebar-categores-box mb-sm-0 mb-xs-0">
                                 <div class="sidebar-title">
                                     <h2>Laptop</h2>
                                 </div>
@@ -367,3 +395,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Content Wraper Area End Here -->
+</div>
+
+
