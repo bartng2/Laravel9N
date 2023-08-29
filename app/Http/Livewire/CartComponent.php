@@ -53,19 +53,26 @@ class CartComponent extends Component
     }
 
 
-    public function updateCart(Request $request, string $id)
+   public function updateCart(Request $request, string $id)
     {
-
         $cart = Cart::find($id);
 
         if (!$cart) {
             return response()->json(['message' => 'Không tìm thấy giỏ hàng'], 404);
         }
-        $cart->product_quantity = $request->product_quantity;
-        $cart->save();
+
+        if ($request->product_quantity == 0) {
+            // Xóa sản phẩm khỏi giỏ hàng
+            $cart->delete();
+        } else {
+            // Cập nhật số lượng sản phẩm
+            $cart->product_quantity = $request->product_quantity;
+            $cart->save();
+        }
 
         return redirect()->back();
     }
+
 
     public function destroyCart(string $id)
     {
