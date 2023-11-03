@@ -74,7 +74,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="static-top-content mt-sm-30">
-                                Gift Special: Gift every single day on Weekends - New Coupon code "
+                                Quà tặng đặc biệt: Quà tặng mỗi ngày cuối tuần - Mã giảm giá mới "
                                 <span>LimupaSaleoff</span>
                             </div>
                         </div>
@@ -89,9 +89,9 @@
                         <div class="col-lg-12">
                             <div class="li-product-tab">
                                 <ul class="nav li-product-menu">
-                                   <li><a class="active" data-toggle="tab" href="#li-new-product"><span>New Arrival</span></a></li>
-                                   <li><a data-toggle="tab" href="#li-bestseller-product"><span>Bestseller</span></a></li>
-                                   <li><a data-toggle="tab" href="#li-featured-product"><span>Featured Products</span></a></li>
+                                   <li><a class="active" data-toggle="tab" href="#li-new-product"><span>Sản phẩm mới</span></a></li>
+                                   <li><a data-toggle="tab" href="#li-bestseller-product"><span>Bán chạy</span></a></li>
+                                   <li><a data-toggle="tab" href="#li-featured-product"><span>Sản phẩm nổi bật</span></a></li>
                                 </ul>               
                             </div>
                             <!-- Begin Li's Tab Menu Content Area -->
@@ -141,7 +141,7 @@
                                                                 <input type="hidden" name="product_code" value="{{$item->product_code}}">
                                                                 <input type="hidden" name="quantity" id="quantity">
                                                                     <li class="add-cart active">
-                                                                        <a onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addCart') }}" data-product-code="{{ $item->product_code }}">Add to cart</a>
+                                                                        <a onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addCart') }}" data-product-code="{{ $item->product_code }}">+ Giỏ hàng</a>
                                                                     </li>
                                                                 </form>
                                                                  
@@ -217,7 +217,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -260,7 +260,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -301,7 +301,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -344,7 +344,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -385,7 +385,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -428,7 +428,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -475,7 +475,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -518,7 +518,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -559,7 +559,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -602,7 +602,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -643,7 +643,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -686,7 +686,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -782,7 +782,7 @@
                                                                 <input type="hidden" name="product_code" value="{{$item->product_code}}">
                                                                 <input type="hidden" name="quantity" id="quantity">
                                                                     <li class="add-cart active">
-                                                                        <a onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addCart') }}" data-product-code="{{ $item->product_code }}">Add to cart</a>
+                                                                        <a onclick="event.preventDefault(); this.closest('form').submit();" href="{{ route('Shop.addCart') }}" data-product-code="{{ $item->product_code }}">+ Giỏ hàng</a>
                                                                     </li>
                                                                 </form>
                                                                  
@@ -878,7 +878,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -921,7 +921,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -962,7 +962,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -1005,7 +1005,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -1046,7 +1046,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>
@@ -1089,7 +1089,7 @@
                                                 </div>
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                        <li class="add-cart active"><a href="#">+ Giỏ hàng</a></li>
                                                         <li><a class="links-details" href="single-product.html"><i class="fa fa-heart-o"></i></a></li>
                                                         <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i></a></li>
                                                     </ul>

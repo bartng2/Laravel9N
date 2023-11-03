@@ -60,7 +60,7 @@
                                                     </td>
                                                     <td class="li-product-add-cart">
                                                         <a href="#" style="font-size: 10px;" onclick="event.preventDefault(); document.getElementById('updateForm{{$item->id}}').submit();">Update</a>
-                                                        <a href="{{route('shop.checkout',['cart_id' => $item->cart_id])}}" style="font-size: 10px;">Check out</a>
+                                                        <a href="{{route('shop.checkout',['id' => $item->id])}}" style="font-size: 10px;">Check out</a>
                                                     </td>
                                             </form>
                                                 </tr>

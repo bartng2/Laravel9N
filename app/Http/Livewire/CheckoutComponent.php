@@ -12,7 +12,7 @@ class CheckoutComponent extends Component
 
     public function mount($cart_id)
     {
-        $this->cart_id = $cart_id;
+        $this->id = $cart_id;
     }
 
     public function render()
@@ -20,7 +20,7 @@ class CheckoutComponent extends Component
         $response = Http::get('https://provinces.open-api.vn/api/');
         $city = $response->json();
 
-        $cart = Cart::where('cart_id',$this->cart_id)->first();
+        $cart = Cart::where('id',$this->id)->first();
 
         return view('livewire.checkout-component', [
             'city'=>$city,
