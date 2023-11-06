@@ -106,7 +106,7 @@
                                     <table class="table">
                                         <tbody>
                                             <tr class="cart_item">
-                                              <td class="cart-product-name">{{$cart->product_name}}<strong class="product-quantity"> × {{$cart->product_quantity}}</strong></td>
+                                              <td class="cart-product-name">{{$cart->product_name}}<strong class="product-quantity"> × {{$cart->product_quantity}}</strong></td>    
                                               <td class="cart-product-total"><span class="amount">{{ number_format($cart->product_price, 0, ",", ".") }} Vnđ</span></td>  
                                             </tr>
                                             
