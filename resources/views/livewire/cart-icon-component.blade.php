@@ -25,7 +25,7 @@
                                                             @csrf
                                                             @method('DELETE')
                                                             <td class="li-product-remove">
-                                                                    <a href="#" onclick="if (confirm('Product deletion confirmation!')) { document.getElementById('deleteForm{{$item->id}}').submit(); }"><i class="fa fa-times"></i>
+                                                                    <a href="#" onclick="if (confirm('Xác nhận xóa sản phẩm!')) { document.getElementById('deleteForm{{$item->id}}').submit(); }"><i class="fa fa-times"></i>
                                                                     </a>
                                                             </td>
                                                             </form>
@@ -38,14 +38,12 @@
                                                         @php 
                                                         $total += $item->product_price * $item->product_quantity @endphp
                                                     @endforeach
-                                                <p class="minicart-total">SUBTOTAL: <span>{{ number_format($total, 0, ",", ".") }}đ</span></p>
+                                                <p class="minicart-total">TỔNG: <span>{{ number_format($total, 0, ",", ".") }}đ</span></p>
                                                 <div class="minicart-button">
                                                     <a href="{{route('shop.cart')}}" class="li-button li-button-dark li-button-fullwidth li-button-sm">
-                                                        <span>View Full Cart</span>
+                                                        <span>Xem giỏ hàng</span>
                                                     </a>
-                                                    <a href="checkout.html" class="li-button li-button-fullwidth li-button-sm">
-                                                        <span>Checkout</span>
-                                                    </a>
+                                                   
                                                 </div>
                                             </div>
                                         </li>

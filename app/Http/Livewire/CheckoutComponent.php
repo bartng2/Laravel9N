@@ -20,11 +20,11 @@ class CheckoutComponent extends Component
         $response = Http::get('https://provinces.open-api.vn/api/');
         $city = $response->json();
 
-        $cart = Cart::where('id',$this->id)->first();
+        $cart = Cart::where('cart_id',$this->id)->first();
 
         return view('livewire.checkout-component', [
             'city'=>$city,
             'cart'=>$cart
-        ]);
+        ]); 
     }
 }

@@ -63,7 +63,7 @@
                             <div class="col-lg-3 col-md-4">
                                 <div class="header-top-left">
                                     <ul class="phone-wrap">
-                                        <li><span>Telephone Enquiry:</span><a href="#">(+123) 123 321 345</a></li>
+                                        <li><span>Liên hệ:</span><a href="#">(+84) 368 009 154</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
                                 <form action="{{route('search')}}" method="GET" class="hm-searchbox">
                                     @csrf
                                     
-                                    <input type="text" name="query" placeholder="Enter your search key ...">
+                                    <input type="text" name="query" placeholder="Nhập khóa tìm kiếm của bạn ...">
                                     <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                                 <!-- Header Middle Searchbox Area End Here -->
@@ -158,10 +158,7 @@
                                    <nav>
                                        <ul>
                                            <li class="dropdown-holder"><a href="/">Home</a>
-                                               <ul class="hb-dropdown">
-                                                <li><a href="">Home 1</a></li>
-                                                   <li><a href="">Home 2</a></li>
-                                               </ul>
+                                               
                                            </li>
                                            <li class="megamenu-holder"><a href="#">Sản phẩm</a>
                                                <ul class="megamenu hb-megamenu">
@@ -173,30 +170,28 @@
                                                    </li>
                                                </ul>
                                            </li>
-                                           <li class="dropdown-holder"><a href="blog-left-sidebar.html">Blog</a>
-                                               <ul class="hb-dropdown">
-                                                   <li><a href="blog-left-sidebar.html">Tổng quan</a>
-                                                   </li>
-                                                   <li><a href="blog-list-left-sidebar.html">Chi tiết</a>
-                                                   </li>
-                                               </ul>
-                                           </li>
+                                           
                                            <li class="megamenu-static-holder"><a href="index.html">Liên kết</a>
                                                <ul class="megamenu hb-megamenu">
                                     
                                                         <li><a href="#">Lựa chọn</a>
                                                        <ul>
-                                                            <li><a href="blog-2-column.html">Tài khoản</a></li>
-                                                            <li><a href="blog-2-column.html">Sản phẩm nổi bật</a></li>
-                                                            <li><a href="blog-left-sidebar.html">Sản phẩm mới</a></li>
-                                                           <li><a href="blog-2-column.html">Giỏ hàng</a></li> 
-                                                           <li><a href="blog-2-column.html">Yêu thích</a></li> 
+                                                            <li><a href="{{route('login')}}">Tài khoản</a></li>
+                                                            
+                                                           <li><a href="{{route('shop.cart')}}">Giỏ hàng</a></li> 
+                                                           <li><a href="{{route('shop.wishlist')}}">Yêu thích</a></li> 
                                                        </ul>
                                                         
                                                </ul>
                                            </li>
-                                           <li><a href="about-us.html">Về chúng tôi</a></li>
-                                           <li><a href="contact.html">Liên hệ</a></li>
+                                           <li class="dropdown-holder"><a href="/">Về chúng tôi</a>
+                                               <ul class="hb-dropdown">
+                                                   <li><a href="{{route('blog')}}">Blog</a>
+                                                   </li>
+                                                   <li><a href="{{route('contact')}}">Liên hệ</a>
+                                                   </li>
+                                               </ul>
+                                           </li>
                                        </ul>
                                    </nav>
                                </div>
@@ -234,8 +229,8 @@
                                             <img src="{{ asset('images/shipping-icon/1.png') }}" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
-                                            <h2>Free Delivery</h2>
-                                            <p>And free returns. See checkout for delivery dates.</p>
+                                            <h2>Giao hàng miễn phí</h2>
+                                            <p>Và trả lại miễn phí. Xem thanh toán để biết ngày giao hàng.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -247,8 +242,8 @@
                                             <img src="{{ asset('images/shipping-icon/2.png') }}" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
-                                            <h2>Safe Payment</h2>
-                                            <p>Pay with the world's most popular and secure payment methods.</p>
+                                            <h2>Thanh toán an toàn</h2>
+                                            <p>Thanh toán bằng các phương thức thanh toán an toàn và phổ biến nhất thế giới.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -260,8 +255,8 @@
                                             <img src="{{ asset('images/shipping-icon/3.png') }}" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
-                                            <h2>Shop with Confidence</h2>
-                                            <p>Our Buyer Protection covers your purchasefrom click to delivery.</p>
+                                            <h2>Mua sắm với sự tự tin</h2>
+                                            <p>Bảo vệ người mua của chúng tôi bao gồm việc mua hàng của bạn từ nhấp chuột đến giao hàng.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -273,8 +268,8 @@
                                             <img src="{{ asset('images/shipping-icon/4.png') }}" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
-                                            <h2>24/7 Help Center</h2>
-                                            <p>Have a question? Call a Specialist or chat online.</p>
+                                            <h2>Trung tâm trợ giúp 24/7</h2>
+                                            <p>Có một câu hỏi? Gọi cho Chuyên gia hoặc trò chuyện trực tuyến.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -293,23 +288,28 @@
                                 <!-- Begin Footer Logo Area -->
                                 <div class="col-lg-4 col-md-6">
                                     <div class="footer-logo">
+                                        <a href="/">
                                         <img src="{{ asset('images/menu/logo/1.jpg') }}" alt="Footer Logo">
+                                        </a>
                                         <p class="info">
-                                            We are a team of designers and developers that create high quality HTML Template & Woocommerce, Shopify Theme.
+                                            Bản quyền trang web thuộc về Pro7KTeam. Mọi sự sao chép hoặc tham khảo đều cần có sự đồng thuận của chúng tôi. |
+                                            Liên hệ ngay: Nguyễn Xuân Thái |
+                                            Email: nam.n1352@gmail.com
+                                            Để biết thêm chi tiết
                                         </p>
                                     </div>
                                     <ul class="des">
                                         <li>
-                                            <span>Address: </span>
-                                            6688Princess Road, London, Greater London BAS 23JK, UK
+                                            <span>Địa chỉ: </span>
+                                            68 Triều Khúc, Thanh Xuân, Hà Nội, Việt Nam
                                         </li>
                                         <li>
-                                            <span>Phone: </span>
-                                            <a href="#">(+123) 123 321 345</a>
+                                            <span>Điện thoại: </span>
+                                            <a href="#">(+84) 368 009 154</a>
                                         </li>
                                         <li>
                                             <span>Email: </span>
-                                            <a href="mailto://info@yourdomain.com">info@yourdomain.com</a>
+                                            <a href="mailto://info@yourdomain.com">thaixuannguyen002@gmail.com</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -317,12 +317,11 @@
                                 <!-- Begin Footer Block Area -->
                                 <div class="col-lg-2 col-md-3 col-sm-6">
                                     <div class="footer-block">
-                                        <h3 class="footer-block-title">Product</h3>
+                                        <h3 class="footer-block-title">Liên kết nhanh</h3>
                                         <ul>
-                                            <li><a href="#">Prices drop</a></li>
-                                            <li><a href="#">New products</a></li>
-                                            <li><a href="#">Best sales</a></li>
-                                            <li><a href="#">Contact us</a></li>
+                                            <li><a href="{{route('login')}}">Tài khoản</a></li>
+                                            <li><a href="{{route('shop.cart')}}">Giỏ hàng</a></li>
+                                            <li><a href="{{route('shop.wishlist')}}">Yêu thích</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -330,12 +329,11 @@
                                 <!-- Begin Footer Block Area -->
                                 <div class="col-lg-2 col-md-3 col-sm-6">
                                     <div class="footer-block">
-                                        <h3 class="footer-block-title">Our company</h3>
+                                        <h3 class="footer-block-title">Xem thêm</h3>
                                         <ul>
-                                            <li><a href="#">Delivery</a></li>
-                                            <li><a href="#">Legal Notice</a></li>
-                                            <li><a href="#">About us</a></li>
-                                            <li><a href="#">Contact us</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="#">Liên hệ</a></li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -343,35 +341,35 @@
                                 <!-- Begin Footer Block Area -->
                                 <div class="col-lg-4">
                                     <div class="footer-block">
-                                        <h3 class="footer-block-title">Follow Us</h3>
+                                        <h3 class="footer-block-title">Theo dõi chúng tôi</h3>
                                         <ul class="social-link">
                                             <li class="twitter">
-                                                <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
+                                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" data-toggle="tooltip" target="_blank" title="Twitter">
                                                     <i class="fa fa-twitter"></i>
                                                 </a>
                                             </li>
                                             <li class="rss">
-                                                <a href="https://rss.com/" data-toggle="tooltip" target="_blank" title="RSS">
+                                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" data-toggle="tooltip" target="_blank" title="RSS">
                                                     <i class="fa fa-rss"></i>
                                                 </a>
                                             </li>
                                             <li class="google-plus">
-                                                <a href="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google +">
+                                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" data-toggle="tooltip" target="_blank" title="Google +">
                                                     <i class="fa fa-google-plus"></i>
                                                 </a>
                                             </li>
                                             <li class="facebook">
-                                                <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank" title="Facebook">
+                                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" data-toggle="tooltip" target="_blank" title="Facebook">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
                                             </li>
                                             <li class="youtube">
-                                                <a href="https://www.youtube.com/" data-toggle="tooltip" target="_blank" title="Youtube">
+                                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" data-toggle="tooltip" target="_blank" title="Youtube">
                                                     <i class="fa fa-youtube"></i>
                                                 </a>
                                             </li>
                                             <li class="instagram">
-                                                <a href="https://www.instagram.com/" data-toggle="tooltip" target="_blank" title="Instagram">
+                                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" data-toggle="tooltip" target="_blank" title="Instagram">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </li>
@@ -379,12 +377,12 @@
                                     </div>
                                     <!-- Begin Footer Newsletter Area -->
                                     <div class="footer-newsletter">
-                                        <h4>Sign up to newsletter</h4>
-                                        <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="footer-subscribe-form validate" target="_blank" novalidate>
+                                        <h4>Đăng ký nhận bản tin</h4>
+                                        <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="footer-subscribe-form validate" target="_blank" novalidate>
                                            <div id="mc_embed_signup_scroll">
                                               <div id="mc-form" class="mc-form subscribe-form form-group" >
-                                                <input id="mc-email" type="email" autocomplete="off" placeholder="Enter your email" />
-                                                <button  class="btn" id="mc-submit">Subscribe</button>
+                                                <input id="mc-email" type="email" autocomplete="off" placeholder="Nhập email" />
+                                                <button  class="btn" id="mc-submit">Đăng kí</button>
                                               </div>
                                            </div>
                                         </form>
@@ -405,38 +403,26 @@
                                 <!-- Begin Footer Links Area -->
                                 <div class="footer-links">
                                     <ul>
-                                        <li><a href="#">Online Shopping</a></li>
-                                        <li><a href="#">Promotions</a></li>
-                                        <li><a href="#">My Orders</a></li>
-                                        <li><a href="#">Help</a></li>
-                                        <li><a href="#">Customer Service</a></li>
-                                        <li><a href="#">Support</a></li>
-                                        <li><a href="#">Most Populars</a></li>
-                                        <li><a href="#">New Arrivals</a></li>
-                                        <li><a href="#">Special Products</a></li>
-                                        <li><a href="#">Manufacturers</a></li>
-                                        <li><a href="#">Our Stores</a></li>
-                                        <li><a href="#">Shipping</a></li>
-                                        <li><a href="#">Payments</a></li>
-                                        <li><a href="#">Warantee</a></li>
-                                        <li><a href="#">Refunds</a></li>
-                                        <li><a href="#">Checkout</a></li>
-                                        <li><a href="#">Discount</a></li>
-                                        <li><a href="#">Refunds</a></li>
-                                        <li><a href="#">Policy Shipping</a></li>
+                                        <li><a href="/">Trang chủ</a></li>
+                                        <li><a href="{{route('login')}}">Tài khoản</a></li>
+                                        <li><a href="{{route('shop.cart')}}">Giỏ hàng</a></li>
+                                        <li><a href="{{route('shop.wishlist')}}">Yêu thích</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Liên hệ</a></li>
+                                        
                                     </ul>
                                 </div>
                                 <!-- Footer Links Area End Here -->
                                 <!-- Begin Footer Payment Area -->
                                 <div class="copyright text-center">
                                     <a href="#">
-                                        <img src="images/payment/1.png" alt="">
+                                        <img src="{{asset('images/payment/1.png')}}" alt="">
                                     </a>
                                 </div>
                                 <!-- Footer Payment Area End Here -->
                                 <!-- Begin Copyright Area -->
                                 <div class="copyright text-center pt-25">
-                                    <span><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
+                                    <span><a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Design by @bartng2 from Pro7KTeam</a></span>
                                 </div>
                                 <!-- Copyright Area End Here -->
                             </div>
@@ -449,127 +435,7 @@
             <!-- Begin Quick View | Modal Area -->
             <div class="modal fade modal-wrapper" id="exampleModalCenter" >
                 <!-- This script got from frontendfreecode.com -->
-<div class="row">
-    <div class="col-lg-6 mx-auto">
-        <div class="card">
-            <div class="card-header">
-                <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
-                    <!-- Credit card form tabs -->
-                    <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
-                        <li class="nav-item">
-                            <a data-toggle="pill" href="#credit-card" class="nav-link active"> <i class="fas fa-credit-card mr-2"></i> Credit Card </a>
-                        </li>
-                        <li class="nav-item">
-                            <a data-toggle="pill" href="#paypal" class="nav-link"> <i class="fab fa-paypal mr-2"></i> Paypal </a>
-                        </li>
-                        <li class="nav-item">
-                            <a data-toggle="pill" href="#net-banking" class="nav-link"> <i class="fas fa-mobile-alt mr-2"></i> Net Banking </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- End -->
-                <!-- Credit card form content -->
-                <div class="tab-content">
-                    <!-- credit card info-->
-                    <div id="credit-card" class="tab-pane fade show active pt-3">
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="username">
-                                    <h6>Card Owner</h6>
-                                </label>
-                                <input type="text" name="username" placeholder="Card Owner Name" required class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="cardNumber">
-                                    <h6>Card number</h6>
-                                </label>
-                                <div class="input-group">
-                                    <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control" required />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text text-muted"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div class="form-group">
-                                        <label>
-                                            <span class="hidden-xs">
-                                                <h6>Expiration Date</h6>
-                                            </span>
-                                        </label>
-                                        <div class="input-group"><input type="number" placeholder="MM" name="" class="form-control" required /> <input type="number" placeholder="YY" name="" class="form-control" required /></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group mb-4">
-                                        <label data-toggle="tooltip" title="Three digit CV code on the back of your card">
-                                            <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
-                                        </label>
-                                        <input type="text" required class="form-control" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer"><button type="button" class="subscribe btn btn-primary btn-block shadow-sm">Confirm Payment</button></div>
-                        </form>
-                    </div>
-                    <!-- End -->
-                    <!-- Paypal info -->
-                    <div id="paypal" class="tab-pane fade pt-3">
-                        <h6 class="pb-2">Select your paypal account type</h6>
-                        <div class="form-group">
-                            <label class="radio-inline"> <input type="radio" name="optradio" checked /> Domestic </label> <label class="radio-inline"> <input type="radio" name="optradio" class="ml-5" />International </label>
-                        </div>
-                        <p>
-                            <button type="button" class="btn btn-primary"><i class="fab fa-paypal mr-2"></i> Log into my Paypal</button>
-                        </p>
-                        <p class="text-muted">
-                            Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order.
-                        </p>
-                    </div>
-                    <!-- End -->
-                    <!-- bank transfer info -->
-                    <div id="net-banking" class="tab-pane fade pt-3">
-                        <div class="form-group">
-                            <label for="Select Your Bank">
-                                <h6>Select your Bank</h6>
-                            </label>
-                            <select class="form-control" id="ccmonth">
-                                <option value="" selected disabled>--Please select your Bank--</option>
-                                <option>Bank 1</option>
-                                <option>Bank 2</option>
-                                <option>Bank 3</option>
-                                <option>Bank 4</option>
-                                <option>Bank 5</option>
-                                <option>Bank 6</option>
-                                <option>Bank 7</option>
-                                <option>Bank 8</option>
-                                <option>Bank 9</option>
-                                <option>Bank 10</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <p>
-                                <button type="button" class="btn btn-primary"><i class="fas fa-mobile-alt mr-2"></i> Proceed Payment</button>
-                            </p>
-                        </div>
-                        <p class="text-muted">
-                            Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order.
-                        </p>
-                    </div>
-                    <!-- End -->
-                    <!-- End -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div><a style="font-size: 8pt; text-decoration: none" target="_blank" href="http://frontendfreecode.com">Free Frontend</a>
-                                                                            
-            </div>   
-            <!-- Quick View | Modal Area End Here -->
-        </div>
-        <!-- Body Wrapper End Here -->
-        <!-- jQuery-V1.12.4 -->
+
 
         <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
         <!-- Popper js -->
@@ -612,6 +478,200 @@
         <script src="{{ asset('js/scrollUp.min.js') }}"></script>
         <!-- Main/Activator js -->
         <script src="{{ asset('js/main.js') }}"></script>
+        <!-- Google Map -->
+        <script src="{{asset('https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyChs2QWiAhnzz0a4OEhzqCXwx_qA9ST_lE')}}"></script>
+        <script>
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 12,
+                    scrollwheel: false,
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(21.028511, 105.854444), // Hanoi, Vietnam
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on
+                        styles: [{
+                                "featureType": "water",
+                                "elementType": "geometry",
+                                "stylers": [{
+                                        "color": "#e9e9e9"
+                                    },
+                                    {
+                                        "lightness": 17
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "landscape",
+                                "elementType": "geometry",
+                                "stylers": [{
+                                        "color": "#f5f5f5"
+                                    },
+                                    {
+                                        "lightness": 20
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.highway",
+                                "elementType": "geometry.fill",
+                                "stylers": [{
+                                        "color": "#ffffff"
+                                    },
+                                    {
+                                        "lightness": 17
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.highway",
+                                "elementType": "geometry.stroke",
+                                "stylers": [{
+                                        "color": "#ffffff"
+                                    },
+                                    {
+                                        "lightness": 29
+                                    },
+                                    {
+                                        "weight": 0.2
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.arterial",
+                                "elementType": "geometry",
+                                "stylers": [{
+                                        "color": "#ffffff"
+                                    },
+                                    {
+                                        "lightness": 18
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.local",
+                                "elementType": "geometry",
+                                "stylers": [{
+                                        "color": "#ffffff"
+                                    },
+                                    {
+                                        "lightness": 16
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "geometry",
+                                "stylers": [{
+                                        "color": "#f5f5f5"
+                                    },
+                                    {
+                                        "lightness": 21
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi.park",
+                                "elementType": "geometry",
+                                "stylers": [{
+                                        "color": "#dedede"
+                                    },
+                                    {
+                                        "lightness": 21
+                                    }
+                                ]
+                            },
+                            {
+                                "elementType": "labels.text.stroke",
+                                "stylers": [{
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "color": "#ffffff"
+                                    },
+                                    {
+                                        "lightness": 16
+                                    }
+                                ]
+                            },
+                            {
+                                "elementType": "labels.text.fill",
+                                "stylers": [{
+                                        "saturation": 36
+                                    },
+                                    {
+                                        "color": "#333333"
+                                    },
+                                    {
+                                        "lightness": 40
+                                    }
+                                ]
+                            },
+                            {
+                                "elementType": "labels.icon",
+                                "stylers": [{
+                                    "visibility": "off"
+                                }]
+                            },
+                            {
+                                "featureType": "transit",
+                                "elementType": "geometry",
+                                "stylers": [{
+                                        "color": "#f2f2f2"
+                                    },
+                                    {
+                                        "lightness": 19
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative",
+                                "elementType": "geometry.fill",
+                                "stylers": [{
+                                        "color": "#fefefe"
+                                    },
+                                    {
+                                        "lightness": 20
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative",
+                                "elementType": "geometry.stroke",
+                                "stylers": [{
+                                        "color": "#fefefe"
+                                    },
+                                    {
+                                        "lightness": 17
+                                    },
+                                    {
+                                        "weight": 1.2
+                                    }
+                                ]
+                            }
+                        ]
+                    };
+
+                    // Get the HTML DOM element that will contain your map 
+                    // We are using a div with id="map" seen below in the <body>
+                    var mapElement = document.getElementById('google-map');
+
+                    // Create the Google Map using our element and options defined above
+                    var map = new google.maps.Map(mapElement, mapOptions);
+
+                    // Let's also add a marker while we're at it
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(21.028511, 105.854444),
+                        map: map,
+                        title: 'Hanoi, Vietnam',
+                        animation: google.maps.Animation.BOUNCE
+                    });
+                }
+            </script>
         @livewireScripts
     </body>
 

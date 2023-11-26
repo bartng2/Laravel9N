@@ -11,9 +11,11 @@ class HomeComponent extends Component
     {
         $nproducts = Product::latest()->take(10)->get();
         $laptop = Product::where('category_id', 20)->take(10)->get();
+        $phone = Product::where('category_id', 17)->take(10)->get();
         return view('livewire.home-component', [
             'nproducts'=>$nproducts,
-            'laptop' => $laptop
+            'laptop' => $laptop,
+            'phone' => $phone
         ]);
     }
 }

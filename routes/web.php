@@ -9,8 +9,11 @@ use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\WishlistComponent;
 use App\Http\Livewire\Shop2Component;
 use App\Http\Livewire\SearchComponent;
+use App\Http\Livewire\BlogComponent;
+use App\Http\Livewire\ContactComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\View\Category\CategoryController;
 use App\Http\Controllers\Admin\View\Product\ProductController;
@@ -46,6 +49,14 @@ Route::get('checkout/{cart_id}', CheckoutComponent::class)->name('shop.checkout'
 Route::get('wishlist', WishlistComponent::class)->name('shop.wishlist');
 
 Route::get('shop2', Shop2Component::class)->name('shop2');
+
+Route::get('blog', BlogComponent::class)->name('blog');
+
+Route::get('contact', ContactComponent::class)->name('contact');
+
+Route::post('message', [ContactComponent::class, 'store'])->name('message');
+
+Route::post('review', [ReviewController::class, 'store'])->name('review');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

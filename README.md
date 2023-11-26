@@ -7,31 +7,29 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Laravel is a sophisticated web application framework known for its expressive and elegant syntax. We believe in making development an enjoyable and creative experience. Laravel simplifies common tasks in web projects, offering features such as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 - Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
 - Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- Database-agnostic [schema migrations](https://laravel.com/docs/migrations).
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Laravel is not only accessible and powerful but also provides the essential tools for building large, robust applications.
 
 ## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Laravel offers the most extensive and thorough [documentation](https://laravel.com/docs) and a comprehensive video tutorial library, making it easy for developers to get started. Explore the framework through the hands-on [Laravel Bootcamp](https://bootcamp.laravel.com), where you'll be guided in building a modern Laravel application from scratch.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+For those who prefer visual learning, [Laracasts](https://laracasts.com) is a treasure trove with over 2000 video tutorials covering Laravel, modern PHP, unit testing, and JavaScript. Boost your skills with this extensive video library.
 
 ## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+We extend our gratitude to the sponsors who fund Laravel development. If you're interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
 ### Premium Partners
 
@@ -49,29 +47,29 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
 - **[Lendio](https://lendio.com)**
 
-## About my App (Limupa)
+# About Limupa (My App)
 
-This is an e-commerce application designed using the Laravel framework.
-Here, users can search and order modern electronic devices such as smartphones, computers, laptops, smart watches, ...
-Hope you will have a great experience using my program.
+Limupa is an e-commerce application meticulously crafted using the Laravel framework. Our platform enables users to effortlessly search and order cutting-edge electronic devices, including smartphones, computers, laptops, and smartwatches.
 
-## Technology used
+We aspire to provide you with a stellar experience while using our program.
 
-- frontend : Html/CSS, Javascript, Bootstrap
-- Backend : Php, Laravel9x, MySql
+## Technology Stack
 
-## Function Description
+- **Frontend:** HTML/CSS, JavaScript, Bootstrap
+- **Backend:** PHP, Laravel 9.x, MySQL
 
-The application includes 2 user interfaces: user interface and administrator interface.
+## Functionality Overview
 
-- User interface : Interface for users to access, conduct search and purchase products. Information of the products displayed here will be taken from the database.
-- Administrator interface : Users can only access this interface with accounts under the "administrator" privilege. Here, the administrator has the role of controlling the product display activities in the user interface, managing adding, editing and deleting product and product categories. In addition, here administrators can manage the number of user orders, product statistics and revenue functions.
+The application features two user interfaces:
 
-## Detailed description
+- **User Interface:** Allows users to access, search, and purchase products, with product information sourced from the database.
+- **Administrator Interface:** Reserved for accounts with "administrator" privileges. Administrators control product display in the user interface, manage product and category operations, and oversee user orders, product statistics, and revenue functions.
 
-- Optimize the user experience on the application interface with LivewireComponent.
-- Manage registration, login, and logout functions with Laravel Authentication.
-- In this application, we use the database management system [MySql](https://www.mysql.com/) to store information such as: product list, category list, user list, shopping cart list, favorite list. To optimize the product [CRUD](https://www.codecademy.com/article/what-is-crud) process, we use [Trigger](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16#:~:text=A%20trigger%20is%20a%20special,on%20a%20table%20or%20view.) to automatically perform functions in certain fields, such as: automatically add product code, automatically add catalog code, automatically price and quantity statistics of products.
-- At the admin interface, we implement CRUD product and product catalog according to [RESTful API](https://www.redhat.com/en/topics/api/what-is-a-rest-api) standard.
-- Store product photos on the app with [Symbolic Link](https://en.wikipedia.org/wiki/Symbolic_link).
-- Order payment function will be done with: VNpay, Momo and bank account.
+## Detailed Description
+
+- We've optimized the user experience on the application interface using LivewireComponent.
+- Registration, login, and logout functions are seamlessly managed with Laravel Authentication.
+- The application utilizes the MySQL database management system to store information such as product lists, category lists, user lists, shopping cart lists, and favorite lists. To streamline the product CRUD process, we employ Triggers to automatically perform functions like adding product codes, catalog codes, and maintaining price and quantity statistics.
+- The admin interface implements CRUD operations for products and product catalogs in adherence to the [RESTful API](https://www.redhat.com/en/topics/api/what-is-a-rest-api) standard.
+- Product photos are stored on the app using Symbolic Links.
+- Payment functions are integrated with VNpay, Momo, and bank accounts.
