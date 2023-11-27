@@ -53,6 +53,12 @@ Limupa is an e-commerce application meticulously crafted using the Laravel frame
 
 We aspire to provide you with a stellar experience while using our program.
 
+<p align="center"><b>Sign in page</b></p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 165457.jpg" width="400" alt="Ảnh 1"></p>
+
+<p align="center"><b>Sign up page</b></p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 165532.jpg" width="400" alt="Ảnh 3"></p>
+
 <p align="center"><b>Home page</b></p>
 <p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 153930.jpg" width="400" alt="Ảnh 1"></p>
 
