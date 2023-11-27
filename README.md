@@ -53,6 +53,9 @@ Limupa is an e-commerce application meticulously crafted using the Laravel frame
 
 We aspire to provide you with a stellar experience while using our program.
 
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 153930.jpg" width="400" alt="Ảnh 1"></p><p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154021.jpg" width="400" alt="Ảnh 1"></p>
+<p align="center">Trang chủ</p>
+
 ## Technology Stack
 
 - **Frontend:** HTML/CSS, JavaScript, Bootstrap
@@ -73,6 +76,3 @@ The application features two user interfaces:
 - The admin interface implements CRUD operations for products and product catalogs in adherence to the [RESTful API](https://www.redhat.com/en/topics/api/what-is-a-rest-api) standard.
 - Product photos are stored on the app using Symbolic Links.
 - Payment functions are integrated with VNpay, Momo, and bank accounts.
-
-<p align="center"><img src="public/images/slider/1.jpg" width="400" alt="Ảnh 1"></p>
-<p align="center">abcvgdhdyruwiwywr</p>
