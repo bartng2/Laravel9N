@@ -63,7 +63,7 @@ We aspire to provide you with a stellar experience while using our program.
 <p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154221.jpg" width="400" alt="Ảnh 5"></p>
 
 <p align="center"><b>Trang giỏ hàng</b></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154259.jpg" width="400" alt="Ảnh 6"></p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154325.jpg" width="400" alt="Ảnh 7"></p>
 
 <p align="center"><b>Trang yêu thích</b></p>
 <p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154405.jpg" width="400" alt="Ảnh 8"></p>
