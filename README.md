@@ -75,3 +75,4 @@ The application features two user interfaces:
 - Payment functions are integrated with VNpay, Momo, and bank accounts.
 
 <p align="center"><img src="public/images/slider/1.jpg" width="400" alt="Ảnh 1"></p>
+We aspire to provide you with a stellar experience while using our program.
