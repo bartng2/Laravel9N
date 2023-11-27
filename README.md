@@ -74,4 +74,4 @@ The application features two user interfaces:
 - Product photos are stored on the app using Symbolic Links.
 - Payment functions are integrated with VNpay, Momo, and bank accounts.
 
-<p align="center"><img src="{{asset('images/blog-banner/2.webp')}}" width="400" alt="Ảnh 1"></p>
+<p align="center"><img src="images\slider\1.jpg" width="400" alt="Ảnh 1"></p>
