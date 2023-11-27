@@ -53,13 +53,26 @@ Limupa is an e-commerce application meticulously crafted using the Laravel frame
 
 We aspire to provide you with a stellar experience while using our program.
 
+<p align="center"><b>Trang chủ</b></p>
 <p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 153930.jpg" width="400" alt="Ảnh 1"></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154021.jpg" width="400" alt="Ảnh 1"></p>
-<p align="center">Trang chủ</p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154021.jpg" width="400" alt="Ảnh 2"></p>
 
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 153930.jpg" width="400" alt="Ảnh 1"></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154021.jpg" width="400" alt="Ảnh 1"></p>
-<p align="center">Trang chủ</p>
+<p align="center"><b>Trang sản phẩm</b></p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154122.jpg" width="400" alt="Ảnh 3"></p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154148.jpg" width="400" alt="Ảnh 4"></p>
+
+<p align="center"><b>Trang chi tiết sản phẩm</b></p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154221.jpg" width="400" alt="Ảnh 5"></p>
+
+<p align="center"><b>Trang giỏ hàng</b></p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154259.jpg" width="400" alt="Ảnh 6"></p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154325.jpg" width="400" alt="Ảnh 7"></p>
+
+<p align="center"><b>Trang yêu thích</b></p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154405.jpg" width="400" alt="Ảnh 8"></p>
+
+<p align="center"><b>Trang thanh toán</b></p>
+<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154436.jpg" width="400" alt="Ảnh 9"></p>
 
 ## Technology Stack
 
