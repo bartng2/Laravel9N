@@ -123,7 +123,7 @@ We aspire to provide you with a stellar experience while using our program.
 <td width="50%">
 <br>
 <p align="center">
-  Cart page
+  Payment Page
 </p>
 <img src="public\images\imgpreview\Screenshot 2023-11-27 154436.jpg" width="400" alt="Ảnh 9">
 </td>
