@@ -53,29 +53,81 @@ Limupa is an e-commerce application meticulously crafted using the Laravel frame
 
 We aspire to provide you with a stellar experience while using our program.
 
-<p align="center"><b>Sign in page</b></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 165457.jpg" width="400" alt="Ảnh 1"></p>
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Sign in page
+</p>
+<img src="public\images\imgpreview\Screenshot 2023-11-27 165457.jpg" width="400" alt="Ảnh 1">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Sign up page
+</p>
+<img src="public\images\imgpreview\Screenshot 2023-11-27 165532.jpg" width="400" alt="Ảnh 3"> 
+</td>
+</table>
 
-<p align="center"><b>Sign up page</b></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 165532.jpg" width="400" alt="Ảnh 3"></p>
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Home page
+</p>
+<img src="public\images\imgpreview\Screenshot 2023-11-27 153930.jpg" width="400" alt="Ảnh 1">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Product page
+</p>
+<img src="public\images\imgpreview\Screenshot 2023-11-27 154122.jpg" width="400" alt="Ảnh 3"> 
+</td>
+</table>
 
-<p align="center"><b>Home page</b></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 153930.jpg" width="400" alt="Ảnh 1"></p>
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Product detail page
+</p>
+<img src="public\images\imgpreview\Screenshot 2023-11-27 154221.jpg" width="400" alt="Ảnh 5">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Cart page
+</p>
+<img src="public\images\imgpreview\Screenshot 2023-11-27 154325.jpg" width="400" alt="Ảnh 7">
+</td>
+</table>
 
-<p align="center"><b>Product page</b></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154122.jpg" width="400" alt="Ảnh 3"></p>
-
-<p align="center"><b>Product detail page</b></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154221.jpg" width="400" alt="Ảnh 5"></p>
-
-<p align="center"><b>Cart page</b></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154325.jpg" width="400" alt="Ảnh 7"></p>
-
-<p align="center"><b>Favorite page</b></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154405.jpg" width="400" alt="Ảnh 8"></p>
-
-<p align="center"><b>Payment page</b></p>
-<p align="center"><img src="public\images\imgpreview\Screenshot 2023-11-27 154436.jpg" width="400" alt="Ảnh 9"></p>
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Favorite page
+</p>
+<img src="public\images\imgpreview\Screenshot 2023-11-27 154405.jpg" width="400" alt="Ảnh 8">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Cart page
+</p>
+<img src="public\images\imgpreview\Screenshot 2023-11-27 154436.jpg" width="400" alt="Ảnh 9">
+</td>
+</table>
 
 ## Technology Stack
 
