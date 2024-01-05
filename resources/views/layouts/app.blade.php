@@ -116,7 +116,7 @@
                             <div class="col-lg-3">
                                 <div class="logo pb-sm-30 pb-xs-30">
                                     <a href="/">
-                                        <img src="{{ asset('images/menu/logo/2.jpg') }}" alt="">
+                                        <img src="{{ asset('images/menu/logo/2.png') }}" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -178,7 +178,7 @@
                                                        <ul>
                                                             <li><a href="{{route('login')}}">Tài khoản</a></li>
                                                             
-                                                           <li><a href="{{route('shop.cart')}}">Giỏ hàng</a></li> 
+                                                           <li><a href="{{route('shop.cart')}}">Giỏ hàng</a></li>  
                                                            <li><a href="{{route('shop.wishlist')}}">Yêu thích</a></li> 
                                                        </ul>
                                                         
@@ -289,7 +289,7 @@
                                 <div class="col-lg-4 col-md-6">
                                     <div class="footer-logo">
                                         <a href="/">
-                                        <img src="{{ asset('images/menu/logo/1.jpg') }}" alt="Footer Logo">
+                                        
                                         </a>
                                         <p class="info">
                                             Bản quyền trang web thuộc về Pro7KTeam. Mọi sự sao chép hoặc tham khảo đều cần có sự đồng thuận của chúng tôi. |

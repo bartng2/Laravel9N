@@ -96,7 +96,3 @@
             <!--Wishlist Area End-->
            
     </div>
-
-                </div>
-            </div> 
-</div>

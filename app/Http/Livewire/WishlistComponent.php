@@ -48,6 +48,10 @@ class WishlistComponent extends Component
                 'product_price' => $product->price,
                 'product_image' => $product->image,
             ]);
+
+             Wishlist::where('product_code', $productCode)
+            ->where('user_id', $user->id)
+            ->delete();
         }
 
         return redirect()->back();
